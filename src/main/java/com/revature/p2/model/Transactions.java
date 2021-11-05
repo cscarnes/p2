@@ -7,14 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "bills")
+@Table(name = "transactions")
 @Data
-public class Bills {
-
-    private String name;
-    private float amount;
-    private String dueDate;
+public class Transactions {
+    private String transactionDate;
+    private float transactionAmount;
     private int uid;
+    private int aid;
     @Id
-    private int bid;
+    private int tid;
 }

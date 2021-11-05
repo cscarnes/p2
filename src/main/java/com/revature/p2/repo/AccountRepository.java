@@ -1,4 +1,15 @@
 package com.revature.p2.repo;
 
-public interface AccountRepository {
+import com.revature.p2.model.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface AccountRepository extends JpaRepository<Account, Integer> {
+
+    public List<Account> findByName(String name);
+
+    public List<Account> findByUid(int uid);
+
+    public List<Account> findByAid(int aid);
 }

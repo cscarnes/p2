@@ -17,17 +17,14 @@ public class BudgetServiceImpl implements BudgetService{
         return budgetRepository.findAll();
     }
 
-    @Override
     public List<Budget> findByName(String name) {
         return budgetRepository.findByName(name);
     }
 
-    @Override
     public Budget findByUid(int uid) {
         return null;
     }
 
-    @Override
     public Budget findByBid(int bid) {
         return null;
     }
