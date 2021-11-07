@@ -9,7 +9,7 @@ public interface AccountRepository extends JpaRepository<Account, Integer> {
 
     public List<Account> findByName(String name);
 
-    public List<Account> findByUid(int uid);
+    public Account findByUid(int uid);
 
-    public List<Account> findByAid(int aid);
+    public Account findByAid(int aid);
 }

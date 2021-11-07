@@ -1,4 +1,15 @@
 package com.revature.p2.repo;
 
-public interface GoalRepository {
+import com.revature.p2.model.Goal;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface GoalRepository extends JpaRepository<Goal, Integer> {
+
+    public List<Goal> findByName(String name);
+
+    public Goal findByGid(int gid);
+
+    public Goal findByUid(int uid);
 }

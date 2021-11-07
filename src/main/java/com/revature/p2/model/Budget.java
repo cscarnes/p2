@@ -11,10 +11,9 @@ public class Budget {
     private String name;
     private float budgetAmount;
     private String budgetLength;
-   // @OneToOne(cascade = CascadeType.ALL)
-   // @JoinColumn(name = "id")
     private int uid;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int bid;
+
 }
