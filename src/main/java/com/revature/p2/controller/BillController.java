@@ -29,7 +29,7 @@ public class BillController {
     }
 
     @GetMapping("/bills/{uid}")
-    public Bill findById(@PathVariable int uid) {
+    public Bill findByUId(@PathVariable int uid) {
         return billService.findByUid(uid);
     }
 
