@@ -38,12 +38,12 @@ public class BudgetController {
         budgetService.save(budget);
     }
 
-    @PutMapping("/budget/{id}")
+    @PutMapping("/budget/{bid}")
     public void update(@PathVariable int id, @RequestBody Budget budget) {
         budgetService.save(budget);
     }
 
-    @DeleteMapping("/budget/{id}")
+    @DeleteMapping("/budget/{bid}")
     public void delete(@PathVariable int id) {
         budgetService.delete(id);
     }

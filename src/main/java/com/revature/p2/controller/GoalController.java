@@ -38,12 +38,12 @@ public class GoalController {
     }
 
     @PutMapping("/goal/{gid}")
-    public void update(@PathVariable int id, @RequestBody Goal goal) {
+    public void update(@PathVariable int gid, @RequestBody Goal goal) {
         goalService.save(goal);
     }
 
     @DeleteMapping("/goal/{gid}")
-    public void delete(@PathVariable int id) {
-        goalService.delete(id);
+    public void delete(@PathVariable int gid) {
+        goalService.delete(gid);
     }
 }
