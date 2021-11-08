@@ -8,11 +8,11 @@ public interface TransactionService {
     
     public List<Transactions> findAll();
     
-    public List<Transactions> findByDate(String date);
+    public List<Transactions> findByTransactionDate(String date);
     
     public Transactions findByTid(int tid);
     
-    public Transactions findByUid(int uid);
+    public List<Transactions> findByUid(int uid);
     
     public void save(Transactions transactions);
 

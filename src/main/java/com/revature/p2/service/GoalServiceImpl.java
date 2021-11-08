@@ -29,7 +29,7 @@ public class GoalServiceImpl implements GoalService{
     }
 
     @Override
-    public Goal findByUid(int uid) {
+    public List<Goal> findByUid(int uid) {
         return goalRepository.findByUid(uid);
     }
 

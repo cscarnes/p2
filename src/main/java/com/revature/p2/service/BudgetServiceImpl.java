@@ -24,13 +24,13 @@ public class BudgetServiceImpl implements BudgetService{
     }
 
     @Override
-    public Budget findByUid(int uid) {
-        return null;
+    public List<Budget> findByUid(int uid) {
+        return budgetRepository.findByUid(uid);
     }
 
     @Override
     public Budget findByBid(int bid) {
-        return null;
+        return budgetRepository.findByBid(bid);
     }
 
     @Override

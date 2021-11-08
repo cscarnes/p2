@@ -2,9 +2,7 @@ package com.revature.p2.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "transactions")
@@ -13,7 +11,8 @@ public class Transactions {
     private String transactionDate;
     private float transactionAmount;
     private int uid;
-    private int aid;
+    //private int aid;
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int tid;
 }

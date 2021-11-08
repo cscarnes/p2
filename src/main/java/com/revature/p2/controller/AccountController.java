@@ -24,13 +24,13 @@ public class AccountController {
         return accountService.findByName(name);
     }
 
-    @GetMapping("/account/{aid}")
+    @GetMapping("/accountA/{aid}")
     public Account findByAid(@PathVariable int aid) {
         return accountService.findByAid(aid);
     }
 
-    @GetMapping("/account/{uid}")
-    public Account findByUId(@PathVariable int uid) {
+    @GetMapping("/accountU/{uid}")
+    public List<Account> findByUId(@PathVariable int uid) {
         return accountService.findByUid(uid);
     }
 

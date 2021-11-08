@@ -20,23 +20,22 @@ public class TransactionsController {
 
     @GetMapping("/transactions/{transactionDate}")
     public List<Transactions> findByDate(@PathVariable String date) {
-        return transactionService.findByDate(date);
+        return transactionService.findByTransactionDate(date);
     }
 
-    @GetMapping("/transactions/{tid}")
+    @GetMapping("/transactionsT/{tid}")
     public Transactions findByTid(@PathVariable int tid) {
         return transactionService.findByTid(tid);
     }
 
-    @GetMapping("/transactions/{uid}")
-    public Transactions findByUId(@PathVariable int uid) {
+    @GetMapping("/transactionsU/{uid}")
+    public List<Transactions> findByUId(@PathVariable int uid) {
         return transactionService.findByUid(uid);
     }
 
     @PostMapping("/transactions")
     public void save(@RequestBody Transactions transactions) {
         transactionService.save(transactions);
-
     }
 
     @PutMapping("/transactions/{tid}")

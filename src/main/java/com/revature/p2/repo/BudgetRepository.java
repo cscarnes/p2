@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface BudgetRepository extends JpaRepository <Budget, Integer> {
 
-    public List<Budget> findByBid(int bid);
+    public Budget findByBid(int bid);
 
     public List<Budget> findByUid(int uid);
 

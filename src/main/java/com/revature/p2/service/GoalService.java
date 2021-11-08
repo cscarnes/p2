@@ -13,7 +13,7 @@ public interface GoalService {
 
     public Goal findByGid(int gid);
 
-    public Goal findByUid(int uid);
+    public List<Goal> findByUid(int uid);
 
     public void save(Goal goal);
 

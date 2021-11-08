@@ -23,12 +23,12 @@ public class BudgetController {
         return budgetService.findByName(name);
     }
 
-    @GetMapping("/budget/{uid}")
-    public Budget findByUid(@PathVariable int uid) {
+    @GetMapping("/budgetU/{uid}")
+    public List<Budget> findByUid(@PathVariable int uid) {
         return budgetService.findByUid(uid);
     }
 
-    @GetMapping("/budget/{bid}")
+    @GetMapping("/budgetB/{bid}")
     public Budget findByBid(@PathVariable int bid) {
         return budgetService.findByBid(bid);
     }

@@ -11,5 +11,5 @@ public interface GoalRepository extends JpaRepository<Goal, Integer> {
 
     public Goal findByGid(int gid);
 
-    public Goal findByUid(int uid);
+    public List<Goal> findByUid(int uid);
 }

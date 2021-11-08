@@ -22,13 +22,13 @@ public class GoalController {
         return goalService.findByName(name);
     }
 
-    @GetMapping("/goal/{gid}")
+    @GetMapping("/goalG/{gid}")
     public Goal findByGid(@PathVariable int gid) {
         return goalService.findByGid(gid);
     }
 
-    @GetMapping("/goal/{uid}")
-    public Goal findByUid(@PathVariable int uid) {
+    @GetMapping("/goalU/{uid}")
+    public List<Goal> findByUid(@PathVariable int uid) {
         return goalService.findByUid(uid);
     }
 

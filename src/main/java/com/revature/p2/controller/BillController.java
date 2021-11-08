@@ -23,13 +23,13 @@ public class BillController {
         return billService.findByName(name);
     }
 
-    @GetMapping("/bills/{bid}")
+    @GetMapping("/billsB/{bid}")
     public Bill findByBid(@PathVariable int bid) {
         return billService.findByBid(bid);
     }
 
-    @GetMapping("/bills/{uid}")
-    public Bill findByUId(@PathVariable int uid) {
+    @GetMapping("/billsU/{uid}")
+    public List<Bill> findByUId(@PathVariable int uid) {
         return billService.findByUid(uid);
     }
 

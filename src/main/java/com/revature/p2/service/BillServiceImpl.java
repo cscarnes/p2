@@ -28,7 +28,7 @@ public class BillServiceImpl implements BillService{
     }
 
     @Override
-    public Bill findByUid(int uid) {
+    public List<Bill> findByUid(int uid) {
         return billRepository.findByUid(uid);
     }
 

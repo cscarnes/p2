@@ -7,9 +7,11 @@ import java.util.List;
 
 public interface TransactionsRepo extends JpaRepository<Transactions, Integer> {
 
-    public List<Transactions> findByDate(String date);
+    public List<Transactions> findByTransactionDate(String date);
+
+    public List<Transactions> findByUid(int uid);
 
     public Transactions findByTid(int tid);
 
-    public Transactions findByUid(int uid);
+
 }

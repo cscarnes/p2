@@ -12,7 +12,7 @@ public interface BillService {
 
     public Bill findByBid(int bid);
 
-    public Bill findByUid(int uid);
+    public List<Bill> findByUid(int uid);
 
     public void save(Bill bill);
 

@@ -24,17 +24,17 @@ public class UserController {
 		return userService.findAll();
 	}
 	
-	@GetMapping("/users/{email}")
+	@GetMapping("/usersE/{email}")
 	public List<User> findByEmail(@PathVariable String email) {
 		return userService.findByEmail(email);
 	}
 	
-	@GetMapping("/users/{username}")
+	@GetMapping("/usersU/{username}")
 	public List<User> findByUsername(@PathVariable String username) {
 		return userService.findByUsername(username);
 	}
 	
-	@GetMapping("/users/{id}")
+	@GetMapping("/usersI/{id}")
 	public User findById(@PathVariable int id) {
 		return userService.findById(id);
 	}

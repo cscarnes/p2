@@ -19,8 +19,8 @@ public class TransactionServiceImpl implements TransactionService{
     }
 
     @Override
-    public List<Transactions> findByDate(String date) {
-        return transactionsRepo.findByDate(date);
+    public List<Transactions> findByTransactionDate(String date) {
+        return transactionsRepo.findByTransactionDate(date);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class TransactionServiceImpl implements TransactionService{
     }
 
     @Override
-    public Transactions findByUid(int uid) {
+    public List<Transactions> findByUid(int uid) {
         return transactionsRepo.findByUid(uid);
     }
 
