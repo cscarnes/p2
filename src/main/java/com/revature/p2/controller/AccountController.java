@@ -37,18 +37,15 @@ public class AccountController {
     @PostMapping("/account")
     public void save(@RequestBody Account account) {
         accountService.save(account);
-
     }
 
     @PutMapping("/account/{aid}")
     public void update(@PathVariable int aid, @RequestBody Account account) {
         accountService.save(account);
-
     }
 
     @DeleteMapping("/account/{aid}")
     public void delete(@PathVariable int aid) {
         accountService.delete(aid);
-
     }
 }
