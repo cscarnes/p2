@@ -23,9 +23,9 @@ public class TransactionsController {
         return transactionService.findByTransactionDate(date);
     }
 
-    @GetMapping("/transactionsT/{tid}")
-    public Transactions findByTid(@PathVariable int tid) {
-        return transactionService.findByTid(tid);
+    @GetMapping("/transactionsT/{id}")
+    public Transactions findByTid(@PathVariable int id) {
+        return transactionService.findByTid(id);
     }
 
     @GetMapping("/transactionsU/{uid}")
@@ -38,15 +38,15 @@ public class TransactionsController {
         transactionService.save(transactions);
     }
 
-    @PutMapping("/transactions/{tid}")
-    public void update(@PathVariable int tid, @RequestBody Transactions transactions) {
+    @PutMapping("/transactions/{id}")
+    public void update(@PathVariable int id, @RequestBody Transactions transactions) {
         transactionService.save(transactions);
 
     }
 
-    @DeleteMapping("/transactions/{tid}")
-    public void delete(@PathVariable int tid) {
-        transactionService.delete(tid);
+    @DeleteMapping("/transactions/{id}")
+    public void delete(@PathVariable int id) {
+        transactionService.delete(id);
 
     }
 }

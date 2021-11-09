@@ -23,12 +23,12 @@ public class BillController {
         return billService.findByName(name);
     }
 
-    @GetMapping("/billsB/{bid}")
+    @GetMapping("/billsB/{id}")
     public Bill findByBid(@PathVariable int bid) {
         return billService.findByBid(bid);
     }
 
-    @GetMapping("/billsU/{uid}")
+    @GetMapping("/billsU/{id}")
     public List<Bill> findByUId(@PathVariable int uid) {
         return billService.findByUid(uid);
     }
@@ -39,13 +39,13 @@ public class BillController {
 
     }
 
-    @PutMapping("/bills/{bid}")
+    @PutMapping("/bills/{id}")
     public void update(@PathVariable int bid, @RequestBody Bill bill) {
         billService.save(bill);
 
     }
 
-    @DeleteMapping("/bills/{bid}")
+    @DeleteMapping("/bills/{id}")
     public void delete(@PathVariable int bid) {
         billService.delete(bid);
 

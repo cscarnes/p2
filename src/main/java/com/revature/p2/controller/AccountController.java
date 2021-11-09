@@ -24,9 +24,9 @@ public class AccountController {
         return accountService.findByName(name);
     }
 
-    @GetMapping("/accountA/{aid}")
-    public Account findByAid(@PathVariable int aid) {
-        return accountService.findByAid(aid);
+    @GetMapping("/accountA/{id}")
+    public Account findByAid(@PathVariable int id) {
+        return accountService.findByAid(id);
     }
 
     @GetMapping("/accountU/{uid}")
@@ -39,13 +39,13 @@ public class AccountController {
         accountService.save(account);
     }
 
-    @PutMapping("/account/{aid}")
-    public void update(@PathVariable int aid, @RequestBody Account account) {
+    @PutMapping("/account/{id}")
+    public void update(@PathVariable int id, @RequestBody Account account) {
         accountService.save(account);
     }
 
-    @DeleteMapping("/account/{aid}")
-    public void delete(@PathVariable int aid) {
-        accountService.delete(aid);
+    @DeleteMapping("/account/{id}")
+    public void delete(@PathVariable int id) {
+        accountService.delete(id);
     }
 }

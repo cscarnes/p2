@@ -28,9 +28,9 @@ public class BudgetController {
         return budgetService.findByUid(uid);
     }
 
-    @GetMapping("/budgetB/{bid}")
-    public Budget findByBid(@PathVariable int bid) {
-        return budgetService.findByBid(bid);
+    @GetMapping("/budgetB/{id}")
+    public Budget findByBid(@PathVariable int id) {
+        return budgetService.findByBid(id);
     }
 
     @PostMapping("/budget")
@@ -38,12 +38,12 @@ public class BudgetController {
         budgetService.save(budget);
     }
 
-    @PutMapping("/budget/{bid}")
+    @PutMapping("/budget/{id}")
     public void update(@PathVariable int id, @RequestBody Budget budget) {
         budgetService.save(budget);
     }
 
-    @DeleteMapping("/budget/{bid}")
+    @DeleteMapping("/budget/{id}")
     public void delete(@PathVariable int id) {
         budgetService.delete(id);
     }
