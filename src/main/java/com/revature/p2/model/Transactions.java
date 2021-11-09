@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "transactions", uniqueConstraints = {
@@ -14,7 +15,8 @@ public class Transactions implements Serializable {
 
     private static final long serialVersionUID = -6790693372846798577L;
 
-    private String transactionDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date transactionDate;
     private float transactionAmount;
     @Column(name = "uid", nullable = true)
     private int uid;
