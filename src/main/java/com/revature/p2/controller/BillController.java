@@ -34,13 +34,13 @@ public class BillController {
 
     }
 
-    @PutMapping("/bills/{id}")
+    @PutMapping("/bills/{bid}")
     public void update(@PathVariable int bid, @RequestBody Bill bill) {
         billService.save(bill);
 
     }
 
-    @DeleteMapping("/bills/{id}")
+    @DeleteMapping("/bills/{bid}")
     public void delete(@PathVariable int bid) {
         billService.delete(bid);
 
