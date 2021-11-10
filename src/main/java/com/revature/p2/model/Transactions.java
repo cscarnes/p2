@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-@Entity
+@Entity(name = "JoinTableTransactionEntity")
 @Table(name = "transactions", uniqueConstraints = {
         @UniqueConstraint(columnNames = "id")
 })
@@ -18,14 +18,9 @@ public class Transactions implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date transactionDate;
     private float transactionAmount;
-    @Column(name = "uid", nullable = true)
-    private int uid;
-    //private int aid;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private int tid;
 
-    @ManyToOne
-    private User user;
 }

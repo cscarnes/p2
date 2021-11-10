@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-@Entity
+@Entity(name = "JoinTableBudgetEntity")
 @Table(name = "budget", uniqueConstraints = {
         @UniqueConstraint(columnNames = "id")
 })
@@ -18,13 +18,8 @@ public class Budget implements Serializable {
     private float budgetAmount;
     @Temporal(TemporalType.TIMESTAMP)
     private Date length;
-    @Column(name = "uid", nullable = true)
-    private int uid;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private int bid;
-
-    @ManyToOne
-    private User user;
 }

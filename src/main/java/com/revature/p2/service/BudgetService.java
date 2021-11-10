@@ -10,8 +10,6 @@ public interface BudgetService {
 
     public List<Budget> findByName(String name);
 
-    public List<Budget> findByUid(int uid);
-
     public Budget findByBid(int bid);
 
     public void save(Budget budget);

@@ -24,11 +24,6 @@ public class BudgetServiceImpl implements BudgetService{
     }
 
     @Override
-    public List<Budget> findByUid(int uid) {
-        return budgetRepository.findByUid(uid);
-    }
-
-    @Override
     public Budget findByBid(int bid) {
         return budgetRepository.findByBid(bid);
     }

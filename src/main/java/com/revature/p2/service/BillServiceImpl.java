@@ -28,11 +28,6 @@ public class BillServiceImpl implements BillService{
     }
 
     @Override
-    public List<Bill> findByUid(int uid) {
-        return billRepository.findByUid(uid);
-    }
-
-    @Override
     public void save(Bill bill) {
         billRepository.save(bill);
     }

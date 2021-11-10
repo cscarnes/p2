@@ -23,11 +23,6 @@ public class BudgetController {
         return budgetService.findByName(name);
     }
 
-    @GetMapping("/budgetU/{uid}")
-    public List<Budget> findByUid(@PathVariable int uid) {
-        return budgetService.findByUid(uid);
-    }
-
     @GetMapping("/budgetB/{id}")
     public Budget findByBid(@PathVariable int id) {
         return budgetService.findByBid(id);

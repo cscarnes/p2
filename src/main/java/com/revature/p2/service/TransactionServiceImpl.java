@@ -29,11 +29,6 @@ public class TransactionServiceImpl implements TransactionService{
     }
 
     @Override
-    public List<Transactions> findByUid(int uid) {
-        return transactionsRepo.findByUid(uid);
-    }
-
-    @Override
     public void save(Transactions transactions) {
         transactionsRepo.save(transactions);
     }

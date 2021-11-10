@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@Entity
+@Entity(name = "JoinTableEmployeeEntity")
 @Table(name = "users", uniqueConstraints = {
 		@UniqueConstraint(columnNames = "id"),
 		@UniqueConstraint(columnNames = "username")
@@ -22,27 +22,31 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", unique = true, nullable = false)
-	private int id;
+	private int userId;
 	private String name;
 	private String email;
 	@Column(name = "username", unique = true, nullable = false)
 	private String username;
 	private String password;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_id")
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="user_bill", joinColumns={@JoinColumn(name="id", referencedColumnName="id")}
+			, inverseJoinColumns={@JoinColumn(name="bill_id", referencedColumnName="id")})
 	private Set<Bill> bills;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_id")
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="user_account", joinColumns={@JoinColumn(name="id", referencedColumnName="id")}
+			, inverseJoinColumns={@JoinColumn(name="account_id", referencedColumnName="id")})
 	private Set<Account> account;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_id")
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="user_budget", joinColumns={@JoinColumn(name="id", referencedColumnName="id")}
+			, inverseJoinColumns={@JoinColumn(name="budget_id", referencedColumnName="id")})
 	private Set<Budget> budget;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_id")
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="user_transaction", joinColumns={@JoinColumn(name="id", referencedColumnName="id")}
+			, inverseJoinColumns={@JoinColumn(name="transaction_id", referencedColumnName="id")})
 	private Set<Transactions> transactions;
 
 	

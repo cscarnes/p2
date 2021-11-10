@@ -28,11 +28,6 @@ public class TransactionsController {
         return transactionService.findByTid(id);
     }
 
-    @GetMapping("/transactionsU/{uid}")
-    public List<Transactions> findByUId(@PathVariable int uid) {
-        return transactionService.findByUid(uid);
-    }
-
     @PostMapping("/transactions")
     public void save(@RequestBody Transactions transactions) {
         transactionService.save(transactions);

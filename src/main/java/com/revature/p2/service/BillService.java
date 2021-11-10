@@ -12,8 +12,6 @@ public interface BillService {
 
     public Bill findByBid(int bid);
 
-    public List<Bill> findByUid(int uid);
-
     public void save(Bill bill);
 
     public void update(int bid, Bill bill);

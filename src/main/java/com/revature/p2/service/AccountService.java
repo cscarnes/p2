@@ -10,8 +10,6 @@ public interface AccountService {
 
     public List<Account> findByName(String name);
 
-    public List<Account> findByUid(int uid);
-
     public Account findByAid(int aid);
 
     public void save(Account account);

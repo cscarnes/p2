@@ -13,5 +13,4 @@ public interface BillRepository extends JpaRepository <Bill, Integer> {
 
     public Bill findByBid(int bid);
 
-    public List<Bill> findByUid(int uid);
 }

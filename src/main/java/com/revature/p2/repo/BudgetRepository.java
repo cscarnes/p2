@@ -10,7 +10,5 @@ public interface BudgetRepository extends JpaRepository <Budget, Integer> {
 
     public Budget findByBid(int bid);
 
-    public List<Budget> findByUid(int uid);
-
     public List<Budget> findByName(String name);
 }

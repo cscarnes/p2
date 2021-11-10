@@ -29,11 +29,6 @@ public class AccountController {
         return accountService.findByAid(id);
     }
 
-    @GetMapping("/accountU/{uid}")
-    public List<Account> findByUId(@PathVariable int uid) {
-        return accountService.findByUid(uid);
-    }
-
     @PostMapping("/account")
     public void save(@RequestBody Account account) {
         accountService.save(account);

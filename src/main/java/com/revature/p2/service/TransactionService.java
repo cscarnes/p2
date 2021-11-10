@@ -12,8 +12,6 @@ public interface TransactionService {
     
     public Transactions findByTid(int tid);
     
-    public List<Transactions> findByUid(int uid);
-    
     public void save(Transactions transactions);
 
     public void update(int tid, Transactions transactions);

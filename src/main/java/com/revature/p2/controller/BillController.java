@@ -28,11 +28,6 @@ public class BillController {
         return billService.findByBid(bid);
     }
 
-    @GetMapping("/billsU/{id}")
-    public List<Bill> findByUId(@PathVariable int uid) {
-        return billService.findByUid(uid);
-    }
-
     @PostMapping("/bills")
     public void save(@RequestBody Bill bill) {
         billService.save(bill);

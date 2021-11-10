@@ -24,11 +24,6 @@ public class AccountServiceImpl implements AccountService{
     }
 
     @Override
-    public List<Account> findByUid(int uid) {
-        return accountRepository.findByUid(uid);
-    }
-
-    @Override
     public Account findByAid(int aid) {
         return accountRepository.findByAid(aid);
     }

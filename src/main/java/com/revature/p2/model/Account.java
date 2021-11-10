@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
+@Entity(name = "JoinTableAccountEntity")
 @Table(name = "account", uniqueConstraints = {
         @UniqueConstraint(columnNames = "id")
 })
@@ -15,13 +15,9 @@ public class Account implements Serializable {
 
     private String name;
     private float balance;
-    @Column(name = "uid", nullable = true)
-    private int uid;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private int aid;
 
-    @ManyToOne
-    private User user;
 }
