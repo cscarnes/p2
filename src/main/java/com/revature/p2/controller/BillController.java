@@ -34,8 +34,8 @@ public class BillController {
 
     }
 
-    @PutMapping("/bills/{bid}")
-    public void update(@PathVariable int bid, @RequestBody Bill bill) {
+    @PutMapping("/bills/{id}")
+    public void update(@PathVariable int id, @RequestBody Bill bill) {
         billService.save(bill);
 
     }

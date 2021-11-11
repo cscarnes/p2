@@ -16,5 +16,5 @@ public interface AccountService {
 
     public void update(int id, Account account);
 
-    public void delete(int id);
+    public void delete(int aid);
 }

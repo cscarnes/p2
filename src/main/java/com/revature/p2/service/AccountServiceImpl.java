@@ -39,7 +39,7 @@ public class AccountServiceImpl implements AccountService{
     }
 
     @Override
-    public void delete(int id) {
-        accountRepository.deleteById(id);
+    public void delete(int aid) {
+        accountRepository.deleteById(aid);
     }
 }
